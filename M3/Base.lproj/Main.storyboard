@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D72i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kLK-ua-Nc1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kLK-ua-Nc1">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -70,10 +71,10 @@
                                 <exclude reference="74o-rx-1ai"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="XB1-e5-cDh"/>
                                 <exclude reference="AHv-Oh-m7v"/>
                                 <exclude reference="TIi-sJ-u5h"/>
                                 <exclude reference="z4J-oA-wG0"/>
-                                <exclude reference="XB1-e5-cDh"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -81,10 +82,10 @@
                                 <include reference="74o-rx-1ai"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="XB1-e5-cDh"/>
                                 <include reference="AHv-Oh-m7v"/>
                                 <include reference="TIi-sJ-u5h"/>
                                 <include reference="z4J-oA-wG0"/>
-                                <include reference="XB1-e5-cDh"/>
                             </mask>
                         </variation>
                     </view>
@@ -106,6 +107,7 @@
                         <viewControllerLayoutGuide type="bottom" id="HcI-22-MbD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="x06-Fv-9Eb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="vGc-l4-hZC">
@@ -200,19 +202,19 @@
                                 <exclude reference="7bP-aW-a0E"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="HiB-Q9-bKe"/>
+                                <exclude reference="X8a-zp-f8r"/>
+                                <exclude reference="ivU-VU-ca2"/>
+                                <exclude reference="1F8-O6-jPJ"/>
                                 <exclude reference="6xA-oq-dD0"/>
                                 <exclude reference="mB0-Ox-xbs"/>
                                 <exclude reference="zpm-dd-NkA"/>
                                 <exclude reference="Gls-ef-9fX"/>
                                 <exclude reference="NeL-sE-Bzt"/>
                                 <exclude reference="hLn-3n-KM1"/>
-                                <exclude reference="HiB-Q9-bKe"/>
-                                <exclude reference="X8a-zp-f8r"/>
-                                <exclude reference="ivU-VU-ca2"/>
                                 <exclude reference="JtL-WI-3on"/>
                                 <exclude reference="RSw-L2-5qU"/>
                                 <exclude reference="c4n-lc-syf"/>
-                                <exclude reference="1F8-O6-jPJ"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -223,19 +225,19 @@
                                 <include reference="7bP-aW-a0E"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="HiB-Q9-bKe"/>
+                                <include reference="X8a-zp-f8r"/>
+                                <include reference="ivU-VU-ca2"/>
+                                <include reference="1F8-O6-jPJ"/>
                                 <include reference="6xA-oq-dD0"/>
                                 <include reference="mB0-Ox-xbs"/>
                                 <include reference="zpm-dd-NkA"/>
                                 <include reference="Gls-ef-9fX"/>
                                 <include reference="NeL-sE-Bzt"/>
                                 <include reference="hLn-3n-KM1"/>
-                                <include reference="HiB-Q9-bKe"/>
-                                <include reference="X8a-zp-f8r"/>
-                                <include reference="ivU-VU-ca2"/>
                                 <include reference="JtL-WI-3on"/>
                                 <include reference="RSw-L2-5qU"/>
                                 <include reference="c4n-lc-syf"/>
-                                <include reference="1F8-O6-jPJ"/>
                             </mask>
                         </variation>
                     </view>
@@ -259,6 +261,7 @@
                         <viewControllerLayoutGuide type="bottom" id="8n2-dt-aul"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3VW-9H-mRv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

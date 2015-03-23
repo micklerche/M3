@@ -10,10 +10,9 @@
 
 @interface Event : NSObject
 @property NSDictionary *dictionary;
-@property NSString *name;
-@property NSInteger rsvpCounts;
-@property NSDictionary *hostGroupInformation;
-//@property (nonatomic, readonly) NSString *desc;
-@property NSString *desc;
+@property (nonatomic, readonly) NSString *name;
+@property (nonatomic, readonly) NSInteger rsvpCounts;
+@property (nonatomic, readonly) NSString *hostGroupInformation;
+@property (nonatomic, readonly) NSString *desc;
 
 @end
