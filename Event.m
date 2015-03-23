@@ -8,9 +8,14 @@
 
 #import "Event.h"
 
-@implementation Event
 
-- (NSString *)getName
+@implementation Event
+@synthesize name = _name;
+@synthesize rsvpCounts = _rsvpCounts;
+@synthesize desc = _desc;
+@synthesize hostGroupInformation = _hostGroupInformation;
+
+- (NSString *)name
 {
     if (!_name) {
         _name = [self.dictionary objectForKey:@"name"];
@@ -18,23 +23,23 @@
     return _name;
 }
 
-- (NSInteger)getRsvpCounts
+- (NSString *)rsvpCounts
 {
     if (!_rsvpCounts) {
-        _rsvpCounts = [[self.dictionary objectForKey:@"rsvpCounts"] integerValue];
+        _rsvpCounts = [[self.dictionary objectForKey:@"yes_rsvp_count"] stringValue];
     }
     return _rsvpCounts;
 }
 
-- (NSString *)getDesc
+- (NSString *)desc
 {
     if (!_desc) {
-        _desc = [self.dictionary objectForKey:@"name"];
+        _desc = [self.dictionary objectForKey:@"description"];
     }
     return _desc;
 }
 
-- (NSString *)getHostGroupInformation
+- (NSString *)hostGroupInformation
 {
     if (!_hostGroupInformation) {
         NSDictionary *dic = [self.dictionary objectForKey:@"group"];
@@ -51,9 +56,9 @@
 {
     self = [super init];
     if (self) {
-        self.name = name;
-        self.rsvpCounts = rsvpCounts;
-        self.desc = desc;
+        //self.name = name;
+        //self.rsvpCounts = rsvpCounts;
+        //self.desc = desc;
     }
 
     return self;

@@ -10,10 +10,11 @@
 #import "EventDescriptionViewController.h"
 #import "Event.h"
 
-@interface M3HomeViewController ()
+@interface M3HomeViewController () <UITextFieldDelegate>
 @property NSDictionary *meetUpData;
 @property NSArray *meetUpDataArray;
 @property (strong, nonatomic) IBOutlet UITableView *meetUpTableView;
+@property (strong, nonatomic) IBOutlet UITextField *searchTextField;
 @end
 
 @implementation M3HomeViewController
@@ -25,7 +26,9 @@
 
     self.meetUpData = [NSDictionary new];
     self.meetUpDataArray = [NSArray new];
-    [self getMeetupData];
+    self.searchTextField.delegate = self;
+
+    [self getMeetupData:@"mobile"];
 
 
 }
@@ -33,9 +36,12 @@
 
 # pragma mark - "Data Access"
 
-- (void)getMeetupData {
+- (void)getMeetupData:(NSString *)searchText {
+    NSString *urlText = [@"https://api.meetup.com/2/open_events.json?zip=60604&text=*****&time=,1w&key=c4f417540617425547e437b3c50427e"
+                         stringByReplacingOccurrencesOfString:@"*****"
+                         withString:searchText];
 
-    NSURL *url = [NSURL URLWithString:@"https://api.meetup.com/2/open_events.json?zip=60604&text=mobile&time=,1w&key=c4f417540617425547e437b3c50427e"];
+    NSURL *url = [NSURL URLWithString:urlText];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [NSURLConnection sendAsynchronousRequest:request
                                        queue:[NSOperationQueue mainQueue]
@@ -70,10 +76,10 @@
     Event *event = [Event new];
     EventDescriptionViewController *vc = [segue destinationViewController];
     vc.event = event;
-    vc.event.name = [eventDictionary objectForKey:@"name"];
-    vc.event.rsvpCounts = [[eventDictionary objectForKey:@"yes_rsvp_count"] intValue];
-    vc.event.desc = [eventDictionary objectForKey:@"description"];
-
+    //vc.event.name = [eventDictionary objectForKey:@"name"];
+    //vc.event.rsvpCounts = [[eventDictionary objectForKey:@"yes_rsvp_count"] intValue];
+    //vc.event.desc = [eventDictionary objectForKey:@"description"];
+    vc.event.dictionary = eventDictionary;
     vc.title = vc.event.name;
 
 
@@ -109,7 +115,12 @@
 
 
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self getMeetupData:textField.text];
+    [self.meetUpTableView reloadData];
 
+    return YES;
+}
 
 
 

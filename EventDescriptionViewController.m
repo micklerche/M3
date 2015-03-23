@@ -13,6 +13,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *rsvpCount;
 @property (strong, nonatomic) IBOutlet UILabel *hostInformation;
 @property (strong, nonatomic) IBOutlet UITextView *eventDescription;
+@property (strong, nonatomic) IBOutlet UIWebView *descriptionWebView;
 
 @end
 
@@ -23,10 +24,11 @@
     [super viewDidLoad];
 
     self.name.text = self.event.name;
-    self.rsvpCount.text = [NSString stringWithFormat:@"%li",self.event.rsvpCounts];
+    self.rsvpCount.text = self.event.rsvpCounts;
     self.eventDescription.text = self.event.desc;
+    self.hostInformation.text = self.event.hostGroupInformation; 
 
-
+    [self.descriptionWebView loadHTMLString:self.event.desc baseURL:nil];
 
 }
 
