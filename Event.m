@@ -10,4 +10,8 @@
 
 @implementation Event
 
+//- (NSString *)desc {
+//    return _desc;
+//}
+
 @end

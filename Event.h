@@ -9,10 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface Event : NSObject
-@property NSDictionary *eventDictionary;
-@property NSString *eventName;
+@property NSDictionary *dictionary;
+@property NSString *name;
 @property NSInteger rsvpCounts;
 @property NSDictionary *hostGroupInformation;
-@property NSString *eventDescription;
+//@property (nonatomic, readonly) NSString *desc;
+@property NSString *desc;
 
 @end
