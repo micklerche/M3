@@ -64,15 +64,15 @@
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell *)cell {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    Event *event = [Event new];
     NSIndexPath *indexPath = [self.meetUpTableView indexPathForCell:cell];
-
-    event.dictionary = [self.meetUpDataArray objectAtIndex:indexPath.row];
+    NSDictionary *eventDictionary = [self.meetUpDataArray objectAtIndex:indexPath.row];
+//    Event *event = [[Event alloc] initWithName:[eventDictionary objectForKey:@"name"]  WithRSVPCount:[[eventDictionary objectForKey:@"yes_rsvp_count"] intValue] WithDescription:[eventDictionary objectForKey:@"description"]];
+    Event *event = [Event new];
     EventDescriptionViewController *vc = [segue destinationViewController];
     vc.event = event;
-    vc.event.name = [event.dictionary objectForKey:@"name"];
+    vc.event.name = [eventDictionary objectForKey:@"name"];
+    vc.event.rsvpCounts = [[eventDictionary objectForKey:@"yes_rsvp_count"] intValue];
+    vc.event.desc = [eventDictionary objectForKey:@"description"];
 
     vc.title = vc.event.name;
 
