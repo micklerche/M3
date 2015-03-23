@@ -7,6 +7,8 @@
 //
 
 #import "M3HomeViewController.h"
+#import "EventDescriptionViewController.h"
+#import "Event.h"
 
 @interface M3HomeViewController ()
 @property NSDictionary *meetUpData;
@@ -61,15 +63,23 @@
 
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell *)cell {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    Event *event = [Event new];
+    NSIndexPath *indexPath = [self.meetUpTableView indexPathForCell:cell];
+
+    event.eventDictionary = [self.meetUpDataArray objectAtIndex:indexPath.row];
+    EventDescriptionViewController *vc = [segue destinationViewController];
+    vc.event = event;
+    vc.title = [event.eventDictionary objectForKey:@"name"]; 
+
 }
-*/
+
 
 
 # pragma mark - "Table View"
@@ -87,11 +97,13 @@
 
     NSDictionary *meetUp = [self.meetUpDataArray objectAtIndex:indexPath.row];
 
+    NSDictionary *venue = [meetUp objectForKey:@"venue"];
     //NSURL *imageUrl = [NSURL URLWithString:[superHero objectForKey:@"avatar_url"]];
     //cell.imageView.contentMode = UIViewContentModeScaleToFill;
 
 
     cell.textLabel.text = [meetUp objectForKey:@"name"];
+    cell.detailTextLabel.text = [venue objectForKey:@"address_1"];
     //cell.detailTextLabel.text = [superHero objectForKey:@"description"];
     //cell.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:imageUrl]];
 
