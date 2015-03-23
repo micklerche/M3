@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		6B0812CC1AC0906000B6CC53 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0812CB1AC0906000B6CC53 /* main.m */; };
 		6B0812CF1AC0906000B6CC53 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0812CE1AC0906000B6CC53 /* AppDelegate.m */; };
-		6B0812D21AC0906000B6CC53 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0812D11AC0906000B6CC53 /* ViewController.m */; };
 		6B0812D51AC0906000B6CC53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B0812D31AC0906000B6CC53 /* Main.storyboard */; };
 		6B0812D71AC0906000B6CC53 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B0812D61AC0906000B6CC53 /* Images.xcassets */; };
 		6B0812DA1AC0906000B6CC53 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B0812D81AC0906000B6CC53 /* LaunchScreen.xib */; };
 		6B0812E61AC0906000B6CC53 /* M3Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0812E51AC0906000B6CC53 /* M3Tests.m */; };
+		6B0812F41AC090E400B6CC53 /* M3HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0812F31AC090E400B6CC53 /* M3HomeViewController.m */; };
+		6B0812F71AC092FF00B6CC53 /* M3MeetupData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0812F61AC092FF00B6CC53 /* M3MeetupData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +33,16 @@
 		6B0812CB1AC0906000B6CC53 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6B0812CD1AC0906000B6CC53 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6B0812CE1AC0906000B6CC53 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6B0812D01AC0906000B6CC53 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6B0812D11AC0906000B6CC53 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6B0812D41AC0906000B6CC53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6B0812D61AC0906000B6CC53 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6B0812D91AC0906000B6CC53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		6B0812DF1AC0906000B6CC53 /* M3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = M3Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B0812E41AC0906000B6CC53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B0812E51AC0906000B6CC53 /* M3Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M3Tests.m; sourceTree = "<group>"; };
+		6B0812F21AC090E400B6CC53 /* M3HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = M3HomeViewController.h; path = M3/View/M3HomeViewController.h; sourceTree = "<group>"; };
+		6B0812F31AC090E400B6CC53 /* M3HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = M3HomeViewController.m; path = M3/View/M3HomeViewController.m; sourceTree = "<group>"; };
+		6B0812F51AC092FF00B6CC53 /* M3MeetupData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = M3MeetupData.h; path = Model/M3MeetupData.h; sourceTree = "<group>"; };
+		6B0812F61AC092FF00B6CC53 /* M3MeetupData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = M3MeetupData.m; path = Model/M3MeetupData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,9 @@
 		6B0812BD1AC0906000B6CC53 = {
 			isa = PBXGroup;
 			children = (
+				6B0812EF1AC0906E00B6CC53 /* Model */,
+				6B0812F01AC0907A00B6CC53 /* View */,
+				6B0812F11AC0908C00B6CC53 /* Controller */,
 				6B0812C81AC0906000B6CC53 /* M3 */,
 				6B0812E21AC0906000B6CC53 /* M3Tests */,
 				6B0812C71AC0906000B6CC53 /* Products */,
@@ -83,11 +89,7 @@
 			children = (
 				6B0812CD1AC0906000B6CC53 /* AppDelegate.h */,
 				6B0812CE1AC0906000B6CC53 /* AppDelegate.m */,
-				6B0812D01AC0906000B6CC53 /* ViewController.h */,
-				6B0812D11AC0906000B6CC53 /* ViewController.m */,
-				6B0812D31AC0906000B6CC53 /* Main.storyboard */,
 				6B0812D61AC0906000B6CC53 /* Images.xcassets */,
-				6B0812D81AC0906000B6CC53 /* LaunchScreen.xib */,
 				6B0812C91AC0906000B6CC53 /* Supporting Files */,
 			);
 			path = M3;
@@ -117,6 +119,34 @@
 				6B0812E41AC0906000B6CC53 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6B0812EF1AC0906E00B6CC53 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6B0812F51AC092FF00B6CC53 /* M3MeetupData.h */,
+				6B0812F61AC092FF00B6CC53 /* M3MeetupData.m */,
+			);
+			name = Model;
+			path = M3;
+			sourceTree = "<group>";
+		};
+		6B0812F01AC0907A00B6CC53 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6B0812D31AC0906000B6CC53 /* Main.storyboard */,
+				6B0812D81AC0906000B6CC53 /* LaunchScreen.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		6B0812F11AC0908C00B6CC53 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6B0812F21AC090E400B6CC53 /* M3HomeViewController.h */,
+				6B0812F31AC090E400B6CC53 /* M3HomeViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,9 +249,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B0812D21AC0906000B6CC53 /* ViewController.m in Sources */,
 				6B0812CF1AC0906000B6CC53 /* AppDelegate.m in Sources */,
+				6B0812F41AC090E400B6CC53 /* M3HomeViewController.m in Sources */,
 				6B0812CC1AC0906000B6CC53 /* main.m in Sources */,
+				6B0812F71AC092FF00B6CC53 /* M3MeetupData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +281,7 @@
 				6B0812D41AC0906000B6CC53 /* Base */,
 			);
 			name = Main.storyboard;
+			path = M3;
 			sourceTree = "<group>";
 		};
 		6B0812D81AC0906000B6CC53 /* LaunchScreen.xib */ = {
@@ -258,6 +290,7 @@
 				6B0812D91AC0906000B6CC53 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = M3;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
