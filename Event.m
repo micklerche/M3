@@ -14,4 +14,17 @@
 //    return _desc;
 //}
 
+-(instancetype)initWithName:(NSString *)name WithRSVPCount:(NSInteger)rsvpCounts WithDescription:(NSString *)desc
+{
+    self = [super init];
+    if (self) {
+        self.name = name;
+        self.rsvpCounts = rsvpCounts;
+        self.desc = desc;
+    }
+
+    return self;
+}
+
+
 @end

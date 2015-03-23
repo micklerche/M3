@@ -23,6 +23,9 @@
     [super viewDidLoad];
 
     self.name.text = self.event.name;
+    self.rsvpCount.text = [NSString stringWithFormat:@"%li",self.event.rsvpCounts];
+    self.eventDescription.text = self.event.desc;
+
 
 
 }

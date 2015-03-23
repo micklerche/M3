@@ -16,4 +16,6 @@
 //@property (nonatomic, readonly) NSString *desc;
 @property NSString *desc;
 
+-(instancetype)initWithName:(NSString *)name WithRSVPCount:(NSInteger)rsvpCounts WithDescription:(NSString *)desc; 
+
 @end
