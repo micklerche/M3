@@ -19,6 +19,7 @@
 		6B0812FD1AC0A43E00B6CC53 /* EventDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0812FC1AC0A43E00B6CC53 /* EventDescriptionViewController.m */; };
 		6B0813031AC0D6C100B6CC53 /* M3CommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0813021AC0D6C100B6CC53 /* M3CommentViewController.m */; };
 		6B0813061AC0DD3500B6CC53 /* M3CommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0813051AC0DD3500B6CC53 /* M3CommentTableViewCell.m */; };
+		6B0813091AC0ED9500B6CC53 /* M3MemberProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0813081AC0ED9500B6CC53 /* M3MemberProfileViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		6B0813021AC0D6C100B6CC53 /* M3CommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = M3CommentViewController.m; path = M3/View/M3CommentViewController.m; sourceTree = "<group>"; };
 		6B0813041AC0DD3500B6CC53 /* M3CommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = M3CommentTableViewCell.h; path = M3/View/M3CommentTableViewCell.h; sourceTree = "<group>"; };
 		6B0813051AC0DD3500B6CC53 /* M3CommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = M3CommentTableViewCell.m; path = M3/View/M3CommentTableViewCell.m; sourceTree = "<group>"; };
+		6B0813071AC0ED9500B6CC53 /* M3MemberProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = M3MemberProfileViewController.h; path = M3/View/M3MemberProfileViewController.h; sourceTree = "<group>"; };
+		6B0813081AC0ED9500B6CC53 /* M3MemberProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = M3MemberProfileViewController.m; path = M3/View/M3MemberProfileViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +166,8 @@
 				6B0813021AC0D6C100B6CC53 /* M3CommentViewController.m */,
 				6B0813041AC0DD3500B6CC53 /* M3CommentTableViewCell.h */,
 				6B0813051AC0DD3500B6CC53 /* M3CommentTableViewCell.m */,
+				6B0813071AC0ED9500B6CC53 /* M3MemberProfileViewController.h */,
+				6B0813081AC0ED9500B6CC53 /* M3MemberProfileViewController.m */,
 				6B0812FB1AC0A43E00B6CC53 /* EventDescriptionViewController.h */,
 				6B0812FC1AC0A43E00B6CC53 /* EventDescriptionViewController.m */,
 			);
@@ -272,6 +277,7 @@
 				6B0812CF1AC0906000B6CC53 /* AppDelegate.m in Sources */,
 				6B0813061AC0DD3500B6CC53 /* M3CommentTableViewCell.m in Sources */,
 				6B0813031AC0D6C100B6CC53 /* M3CommentViewController.m in Sources */,
+				6B0813091AC0ED9500B6CC53 /* M3MemberProfileViewController.m in Sources */,
 				6B0812F41AC090E400B6CC53 /* M3HomeViewController.m in Sources */,
 				6B0812FA1AC0A29D00B6CC53 /* Event.m in Sources */,
 				6B0812CC1AC0906000B6CC53 /* main.m in Sources */,

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface M3CommentTableViewCell : UITableViewCell
+@property NSString *memberID;
 @property (strong, nonatomic) IBOutlet UITextView *commentTextView;
 @property (strong, nonatomic) IBOutlet UILabel *timelabel;
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;

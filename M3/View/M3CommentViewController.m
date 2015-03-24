@@ -8,6 +8,7 @@
 
 #import "M3CommentViewController.h"
 #import "M3CommentTableViewCell.h"
+#import "M3MemberProfileViewController.h"
 
 @interface M3CommentViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *commentTableView;
@@ -60,15 +61,17 @@
 }
 
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(M3CommentTableViewCell *)cell {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    M3MemberProfileViewController *vc = [segue destinationViewController];
+    vc.memberID = cell.memberID;
 }
-*/
+
 
 
 # pragma mark - "Table View"
@@ -84,7 +87,7 @@
 
     cell.nameLabel.text = [meetUp objectForKey:@"member_name"];
 
-    //cell.timelabel.text = [meetUp objectForKey:@"time"];
+    cell.memberID = [[meetUp objectForKey:@"member_id"] stringValue];
 
     cell.commentTextView.text = [meetUp objectForKey:@"comment"];
 

@@ -323,7 +323,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dgh-s2-xTM" id="TGW-NO-hNE">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eGg-b4-9tB">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGg-b4-9tB">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -419,6 +419,7 @@
                                             <outlet property="commentTextView" destination="eGg-b4-9tB" id="CYu-ve-FD9"/>
                                             <outlet property="nameLabel" destination="i8z-A4-apF" id="env-IU-CGz"/>
                                             <outlet property="timelabel" destination="5Fe-B7-FHE" id="H1J-NU-SkO"/>
+                                            <segue destination="QbT-6Z-n5O" kind="show" id="tGI-ee-ayV"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -467,6 +468,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hTg-Qd-Ug7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2619" y="-387"/>
+        </scene>
+        <!--Member Profile View Controller-->
+        <scene sceneID="2Sz-R4-hKW">
+            <objects>
+                <viewController id="QbT-6Z-n5O" customClass="M3MemberProfileViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bWN-4o-Dff"/>
+                        <viewControllerLayoutGuide type="bottom" id="VAg-Kc-6p2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AOS-vH-LLd">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="riR-Tu-FVp">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="riR-Tu-FVp" secondAttribute="trailing" constant="-16" id="8Ue-h0-DO0"/>
+                            <constraint firstItem="riR-Tu-FVp" firstAttribute="top" secondItem="AOS-vH-LLd" secondAttribute="topMargin" id="bY1-vF-iG5"/>
+                            <constraint firstItem="VAg-Kc-6p2" firstAttribute="top" secondItem="riR-Tu-FVp" secondAttribute="bottom" id="rXh-Fb-45h"/>
+                            <constraint firstItem="riR-Tu-FVp" firstAttribute="leading" secondItem="AOS-vH-LLd" secondAttribute="leadingMargin" constant="-16" id="sOa-pZ-5Ea"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="riR-Tu-FVp"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="8Ue-h0-DO0"/>
+                                <exclude reference="bY1-vF-iG5"/>
+                                <exclude reference="sOa-pZ-5Ea"/>
+                                <exclude reference="rXh-Fb-45h"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="riR-Tu-FVp"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="8Ue-h0-DO0"/>
+                                <include reference="bY1-vF-iG5"/>
+                                <include reference="sOa-pZ-5Ea"/>
+                                <include reference="rXh-Fb-45h"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="riR-Tu-FVp" id="SdG-GG-ePT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vNL-7M-Zja" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3412.5" y="-387"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="L9P-us-OcN">
