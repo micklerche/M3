@@ -9,11 +9,13 @@
 #import "M3CommentViewController.h"
 #import "M3CommentTableViewCell.h"
 #import "M3MemberProfileViewController.h"
+#import "M3MeetupData.h"
 
-@interface M3CommentViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface M3CommentViewController () <UITableViewDataSource, UITableViewDelegate, M3MeetupDataDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *commentTableView;
 @property NSDictionary *meetUpData;
 @property NSArray *meetUpDataArray;
+
 @end
 
 @implementation M3CommentViewController
@@ -24,7 +26,14 @@
     self.meetUpData = [NSDictionary new];
     self.meetUpDataArray = [NSArray new];
 
-    [self getMeetupData:self.event.groupId];
+    // remove this
+    //[self getMeetupData:self.event.groupId];
+
+    M3MeetupData *md = [[M3MeetupData alloc]initWithType:@"Commet" WithSearch:self.event.groupId];
+    md.delegate = self;
+    [md getDictionaryData];
+
+
 
 
 }
@@ -46,8 +55,10 @@
                                self.meetUpData = [NSJSONSerialization JSONObjectWithData:data
                                                                                  options:NSJSONReadingAllowFragments
                                                                                    error:&connectionError];
-                               NSLog(@"Data Received");
+                               NSLog(@"Comment data received");
                                [self moveDataToArray];
+                                NSLog(@"Comment items: %li", (long)self.meetUpDataArray.count);
+
                                [self.commentTableView reloadData];
 
 
@@ -100,6 +111,22 @@
 
     return cell;
 }
+
+
+#pragma mark - "M3Data Delegate"
+
+- (void)gotMeetupData:(id)data {
+    NSLog(@"Delegate Data Received");
+
+    self.meetUpData = data;
+    [self moveDataToArray];
+    NSLog(@"Delegate item count: %li", (long)self.meetUpDataArray.count);
+
+    [self.commentTableView reloadData];
+}
+
+
+
 
 
 @end

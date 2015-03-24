@@ -16,31 +16,20 @@
 
 @implementation M3MemberProfileViewController
 
-    - (void)viewDidLoad {
-        [super viewDidLoad];
-        [self goToURLString:self.memberID];
-    }
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self goToURLString:self.memberID];
+}
+
+- (void)goToURLString:(NSString *)string {
+    NSString *urlString = [@"http://www.meetup.com/members/*********/" stringByReplacingOccurrencesOfString:@"*********" withString:string];
+    NSURL *url = [NSURL URLWithString:urlString];
+    //create new url based on string
+    NSURLRequest *request = [NSURLRequest requestWithURL:url]; //url request
+    [self.webView loadRequest:request]; //give our webview load the request
+}
 
 
-    - (void)goToURLString:(NSString *)string {
-
-        NSString *urlString = [@"http://www.meetup.com/members/*********/" stringByReplacingOccurrencesOfString:@"*********" withString:string];
-        NSURL *url = [NSURL URLWithString:urlString];
-        //create new url based on string
-        NSURLRequest *request = [NSURLRequest requestWithURL:url]; //url request
-        [self.webView loadRequest:request]; //give our webview load the request
-    }
-
-
-
-
-#pragma mark - Navigation
-
-//// In a storyboard-based application, you will often want to do a little preparation before navigation
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    // Get the new view controller using [segue destinationViewController].
-//    // Pass the selected object to the new view controller.
-//}
 
 
 @end

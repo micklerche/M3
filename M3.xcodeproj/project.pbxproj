@@ -164,12 +164,12 @@
 				6B0812F31AC090E400B6CC53 /* M3HomeViewController.m */,
 				6B0813011AC0D6C100B6CC53 /* M3CommentViewController.h */,
 				6B0813021AC0D6C100B6CC53 /* M3CommentViewController.m */,
-				6B0813041AC0DD3500B6CC53 /* M3CommentTableViewCell.h */,
-				6B0813051AC0DD3500B6CC53 /* M3CommentTableViewCell.m */,
 				6B0813071AC0ED9500B6CC53 /* M3MemberProfileViewController.h */,
 				6B0813081AC0ED9500B6CC53 /* M3MemberProfileViewController.m */,
 				6B0812FB1AC0A43E00B6CC53 /* EventDescriptionViewController.h */,
 				6B0812FC1AC0A43E00B6CC53 /* EventDescriptionViewController.m */,
+				6B0813041AC0DD3500B6CC53 /* M3CommentTableViewCell.h */,
+				6B0813051AC0DD3500B6CC53 /* M3CommentTableViewCell.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
