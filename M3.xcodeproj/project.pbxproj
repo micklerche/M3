@@ -17,6 +17,8 @@
 		6B0812F71AC092FF00B6CC53 /* M3MeetupData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0812F61AC092FF00B6CC53 /* M3MeetupData.m */; };
 		6B0812FA1AC0A29D00B6CC53 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0812F91AC0A29D00B6CC53 /* Event.m */; };
 		6B0812FD1AC0A43E00B6CC53 /* EventDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0812FC1AC0A43E00B6CC53 /* EventDescriptionViewController.m */; };
+		6B0813031AC0D6C100B6CC53 /* M3CommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0813021AC0D6C100B6CC53 /* M3CommentViewController.m */; };
+		6B0813061AC0DD3500B6CC53 /* M3CommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0813051AC0DD3500B6CC53 /* M3CommentTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,10 @@
 		6B0812F91AC0A29D00B6CC53 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Event.m; path = ../Event.m; sourceTree = "<group>"; };
 		6B0812FB1AC0A43E00B6CC53 /* EventDescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDescriptionViewController.h; sourceTree = "<group>"; };
 		6B0812FC1AC0A43E00B6CC53 /* EventDescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDescriptionViewController.m; sourceTree = "<group>"; };
+		6B0813011AC0D6C100B6CC53 /* M3CommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = M3CommentViewController.h; path = M3/View/M3CommentViewController.h; sourceTree = "<group>"; };
+		6B0813021AC0D6C100B6CC53 /* M3CommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = M3CommentViewController.m; path = M3/View/M3CommentViewController.m; sourceTree = "<group>"; };
+		6B0813041AC0DD3500B6CC53 /* M3CommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = M3CommentTableViewCell.h; path = M3/View/M3CommentTableViewCell.h; sourceTree = "<group>"; };
+		6B0813051AC0DD3500B6CC53 /* M3CommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = M3CommentTableViewCell.m; path = M3/View/M3CommentTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +159,10 @@
 			children = (
 				6B0812F21AC090E400B6CC53 /* M3HomeViewController.h */,
 				6B0812F31AC090E400B6CC53 /* M3HomeViewController.m */,
+				6B0813011AC0D6C100B6CC53 /* M3CommentViewController.h */,
+				6B0813021AC0D6C100B6CC53 /* M3CommentViewController.m */,
+				6B0813041AC0DD3500B6CC53 /* M3CommentTableViewCell.h */,
+				6B0813051AC0DD3500B6CC53 /* M3CommentTableViewCell.m */,
 				6B0812FB1AC0A43E00B6CC53 /* EventDescriptionViewController.h */,
 				6B0812FC1AC0A43E00B6CC53 /* EventDescriptionViewController.m */,
 			);
@@ -260,6 +270,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B0812CF1AC0906000B6CC53 /* AppDelegate.m in Sources */,
+				6B0813061AC0DD3500B6CC53 /* M3CommentTableViewCell.m in Sources */,
+				6B0813031AC0D6C100B6CC53 /* M3CommentViewController.m in Sources */,
 				6B0812F41AC090E400B6CC53 /* M3HomeViewController.m in Sources */,
 				6B0812FA1AC0A29D00B6CC53 /* Event.m in Sources */,
 				6B0812CC1AC0906000B6CC53 /* main.m in Sources */,

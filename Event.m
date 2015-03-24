@@ -14,6 +14,7 @@
 @synthesize rsvpCounts = _rsvpCounts;
 @synthesize desc = _desc;
 @synthesize hostGroupInformation = _hostGroupInformation;
+@synthesize groupId = _groupId;
 
 - (NSString *)name
 {
@@ -47,6 +48,15 @@
         _hostGroupInformation = [[NSString stringWithFormat:@"%@ - Join mode: ",[dic objectForKey:@"urlname"]] stringByAppendingString:[dic objectForKey:@"join_mode"]];
     }
     return _hostGroupInformation;
+}
+
+- (NSString *)groupId
+{
+    if (!_groupId) {
+        NSDictionary *dic = [self.dictionary objectForKey:@"group"];
+        _groupId = [[dic objectForKey:@"id"] stringValue];
+    }
+    return _groupId;
 }
 
 

@@ -14,6 +14,7 @@
 @property (nonatomic, strong, readonly) NSString *rsvpCounts;
 @property (nonatomic, strong, readonly) NSString *hostGroupInformation;
 @property (nonatomic, strong, readonly) NSString *desc;
+@property (nonatomic, strong, readonly) NSString *groupId;
 
 -(instancetype)initWithName:(NSString *)name WithRSVPCount:(NSInteger)rsvpCounts WithDescription:(NSString *)desc; 
 

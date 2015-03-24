@@ -62,8 +62,6 @@
 
 - (void)moveDataToArray {
     self.meetUpDataArray = [self.meetUpData valueForKey:@"results"];
-
-
 }
 
 
@@ -72,16 +70,11 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell *)cell {
     NSIndexPath *indexPath = [self.meetUpTableView indexPathForCell:cell];
     NSDictionary *eventDictionary = [self.meetUpDataArray objectAtIndex:indexPath.row];
-//    Event *event = [[Event alloc] initWithName:[eventDictionary objectForKey:@"name"]  WithRSVPCount:[[eventDictionary objectForKey:@"yes_rsvp_count"] intValue] WithDescription:[eventDictionary objectForKey:@"description"]];
     Event *event = [Event new];
     EventDescriptionViewController *vc = [segue destinationViewController];
     vc.event = event;
-    //vc.event.name = [eventDictionary objectForKey:@"name"];
-    //vc.event.rsvpCounts = [[eventDictionary objectForKey:@"yes_rsvp_count"] intValue];
-    //vc.event.desc = [eventDictionary objectForKey:@"description"];
     vc.event.dictionary = eventDictionary;
     vc.title = vc.event.name;
-
 
 }
 
@@ -99,14 +92,9 @@
     NSDictionary *meetUp = [self.meetUpDataArray objectAtIndex:indexPath.row];
 
     NSDictionary *venue = [meetUp objectForKey:@"venue"];
-    //NSURL *imageUrl = [NSURL URLWithString:[superHero objectForKey:@"avatar_url"]];
-    //cell.imageView.contentMode = UIViewContentModeScaleToFill;
-
 
     cell.textLabel.text = [meetUp objectForKey:@"name"];
     cell.detailTextLabel.text = [venue objectForKey:@"address_1"];
-    //cell.detailTextLabel.text = [superHero objectForKey:@"description"];
-    //cell.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:imageUrl]];
 
 
 
